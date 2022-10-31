@@ -1,6 +1,5 @@
 function parallax_height(){
-    let scroll_top = $(this).scrollTop();
-    let section_top = $('.section').offset().top;
+    let scroll_top = $(window).scrollTop();
     let header_height = $(".header-section").outerHeight();
     $(".section").css({
         "margin-top": header_height
@@ -11,6 +10,7 @@ function parallax_height(){
 }
 
 parallax_height();
+
 $(window).scroll(function(){
     parallax_height();
 });
